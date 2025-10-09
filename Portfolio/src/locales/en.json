@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Welcome to my portfolio",
+    "latestProjects": "My latest projects"
+  },
+  "about": {
+    "title": "About me",
+    "description": "I am a developer passionate about building modern and high-performance web applications."
+  },
+  "projects": {
+    "title": "My projects",
+    "favorites": "Favorite projects",
+    "all": "All projects",
+    "filter": "Filter by technology"
+  },
+  "contact": {
+    "title": "Contact me",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Bienvenue sur mon portfolio",
+    "latestProjects": "Mes derniers projets"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "description": "Je suis un développeur passionné par la création d'applications web modernes et performantes."
+  },
+  "projects": {
+    "title": "Mes projets",
+    "favorites": "Projets favoris",
+    "all": "Tous les projets",
+    "filter": "Filtrer par technologie"
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer"
+  }
+}
