@@ -3,15 +3,30 @@
     "home": "Accueil",
     "about": "À propos",
     "projects": "Projets",
+    "veille": "Veille",
     "contact": "Contact"
   },
   "home": {
     "welcome": "Bienvenue sur mon portfolio",
-    "latestProjects": "Mes derniers projets"
+    "loading": "Chargement des projets...",
+    "aboutTitle": "À propos",
+    "aboutText": "Étudiant en tant qu'intégrateur web sur OpenClassrooms, je souhaite approfondir mes connaissances.",
+    "aboutButton": "Vers À propos",
+    "latestToolsTitle": "Mes derniers outils appris",
+    "contactTitle": "Contact",
+    "contactText": "Des questions, ou un projet en tête ?",
+    "contactButton": "Contactez-moi"
   },
   "about": {
     "title": "À propos de moi",
-    "description": "Je suis un développeur passionné par la création d'applications web modernes et performantes."
+    "description": "Je suis un développeur passionné par la création d'applications web modernes et performantes.",
+    "descriptionExtended": "Étudiant en tant qu'intégrateur web sur OpenClassrooms, je souhaite approfondir mes connaissances et continuer à progresser dans le domaine du développement front-end.",
+    "section": {
+      "aboutMe": "À propos de moi",
+      "training": "Formations",
+      "skills": "Compétences"
+    },
+    "skillsSection": "Mes compétences."
   },
   "projects": {
     "title": "Mes projets",
@@ -25,5 +40,24 @@
     "email": "Email",
     "message": "Message",
     "send": "Envoyer"
+  },
+  "courses": {
+    "title": "Parcours & Expériences",
+    "devWeb": "Intégrateur Web - OpenClassrooms",
+    "university": "Licence Informatique",
+    "trainingIntro": "Voici un aperçu de mon parcours académique et professionnel."
+  },
+  "skills": {
+    "title": "Compétences",
+    "techStack": "Compétences techniques",
+    "softSkills": "Compétences relationnelles",
+    "techList": ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+    "softList": ["Résolution de problèmes", "Travail en équipe", "Adaptabilité", "Communication"]
+  },
+  "veille": {
+    "title": "Veille & Blog",
+    "article1": "React Native 0.82",
+    "article2": "Introduction à TypeScript",
+    "article3": "Les nouveautés de JavaScript ES2025"
   }
 }

@@ -9,9 +9,9 @@ export default function Header() {
   };
 
   return (
-    <header className="flex justify-between items-center p-4">
+    <header className="">
       <nav>
-        <ul className="flex gap-4">
+        <ul className="">
           <li>
             <Link to="/">{t("nav.home")}</Link>
           </li>
@@ -22,17 +22,16 @@ export default function Header() {
             <Link to="/projects">{t("nav.projects")}</Link>
           </li>
           <li>
+            <Link to="/veille">{t("nav.veille")}</Link>
+          </li>
+          <li>
             <Link to="/contact">{t("nav.contact")}</Link>
           </li>
         </ul>
       </nav>
 
       <div>
-        <select
-          onChange={changeLanguage}
-          value={i18n.language}
-          className="border rounded px-2 py-1"
-        >
+        <select onChange={changeLanguage} value={i18n.language} className="">
           <option value="fr">🇫🇷 Français</option>
           <option value="en">🇬🇧 English</option>
         </select>

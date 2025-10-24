@@ -2,16 +2,19 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import Veille from "./pages/Veille";
 import Contact from "./pages/Contact";
 
 function AppRouter() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/About" element={<About />} />
-      <Route path="/Projects" element={<Projects />} />
-      <Route path="/Contact" element={<Contact />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/veille" element={<Veille />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 }
+
 export default AppRouter;

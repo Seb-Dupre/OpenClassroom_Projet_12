@@ -3,15 +3,30 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
+    "veille": "Tech Watch",
     "contact": "Contact"
   },
   "home": {
     "welcome": "Welcome to my portfolio",
-    "latestProjects": "My latest projects"
+    "loading": "Loading projects...",
+    "aboutTitle": "About me",
+    "aboutText": "Student as a web integrator at OpenClassrooms, I aim to deepen my knowledge.",
+    "aboutButton": "Go to About",
+    "latestToolsTitle": "My latest learned tools",
+    "contactTitle": "Contact",
+    "contactText": "Any questions, or a project in mind?",
+    "contactButton": "Contact me"
   },
   "about": {
     "title": "About me",
-    "description": "I am a developer passionate about building modern and high-performance web applications."
+    "description": "I am a developer passionate about building modern and high-performance web applications.",
+    "descriptionExtended": "As a web integrator student at OpenClassrooms, I strive to deepen my technical expertise and improve my front-end development skills.",
+    "section": {
+      "aboutMe": "About me",
+      "training": "Training",
+      "skills": "Skills"
+    },
+    "skillsSection": "My skills."
   },
   "projects": {
     "title": "My projects",
@@ -25,5 +40,24 @@
     "email": "Email",
     "message": "Message",
     "send": "Send"
+  },
+  "courses": {
+    "title": "Courses & Experience",
+    "devWeb": "Web Integrator - OpenClassrooms",
+    "university": "Bachelor in Computer Science",
+    "trainingIntro": "Here's an overview of my academic and professional journey."
+  },
+  "skills": {
+    "title": "Skills",
+    "techStack": "Technical Skills",
+    "softSkills": "Soft Skills",
+    "techList": ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+    "softList": ["Problem Solving", "Teamwork", "Adaptability", "Communication"]
+  },
+  "veille": {
+    "title": "Tech Watch & Blog",
+    "article1": "React Native 0.82",
+    "article2": "Introduction to TypeScript",
+    "article3": "What's new in JavaScript ES2025"
   }
 }
