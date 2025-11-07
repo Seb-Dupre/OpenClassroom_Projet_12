@@ -1,3 +1,4 @@
+@import "tailwindcss";
 .project-image {
   width: 100%;
   max-width: 500px; 

@@ -8,3 +8,4 @@ export default function ProjectCard({ project }) {
     </div>
   );
 }
+//ajouté des bar de pourcentage
