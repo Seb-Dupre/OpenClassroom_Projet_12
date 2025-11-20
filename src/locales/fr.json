@@ -11,7 +11,7 @@
     "loading": "Chargement des projets...",
     "aboutTitle": "À propos",
     "aboutText": "Étudiant en tant qu'intégrateur web sur OpenClassrooms, je souhaite approfondir mes connaissances.",
-    "aboutButton": "Vers À propos",
+    "aboutButton": "À propos de moi",
     "latestToolsTitle": "Mes derniers outils appris",
     "contactTitle": "Contact",
     "contactText": "Des questions, ou un projet en tête ?",
@@ -32,7 +32,8 @@
     "title": "Mes projets",
     "favorites": "Projets favoris",
     "all": "Tous les projets",
-    "filter": "Filtrer par technologie"
+    "filter": "Filtrer par technologie",
+    "githubLink": "Vers le repo GitHub >"
   },
   "contact": {
     "title": "Contactez-moi",

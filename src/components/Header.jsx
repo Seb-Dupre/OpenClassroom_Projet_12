@@ -1,56 +1,125 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Header() {
   const { t, i18n } = useTranslation();
+  const [langOpen, setLangOpen] = useState(false);
 
-  const changeLanguage = (e) => {
-    i18n.changeLanguage(e.target.value);
+  const toggleLangMenu = () => setLangOpen((prev) => !prev);
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    setLangOpen(false);
   };
 
+  const navItems = [
+    { to: "/", label: t("nav.home") },
+    { to: "/about", label: t("nav.about") },
+    { to: "/projects", label: t("nav.projects") },
+    { to: "/veille", label: t("nav.veille") },
+    { to: "/contact", label: t("nav.contact") },
+  ];
+
   return (
-    <header className="flex justify-between items-center px-6 bg-[#52341B] text-white shadow-md h-[10vh]">
-      {/* Navigation */}
-      <nav className="flex items-center h-full">
-        <ul className="flex gap-6">
-          <li>
-            <Link to="/" className="hover:text-[#FA9224] transition">
-              {t("nav.home")}
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="hover:text-[#FA9224] transition">
-              {t("nav.about")}
-            </Link>
-          </li>
-          <li>
-            <Link to="/projects" className="hover:text-[#FA9224] transition">
-              {t("nav.projects")}
-            </Link>
-          </li>
-          <li>
-            <Link to="/veille" className="hover:text-[#FA9224] transition">
-              {t("nav.veille")}
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="hover:text-[#FA9224] transition">
-              {t("nav.contact")}
-            </Link>
-          </li>
+    <header className="bg-color3 text-color4 shadow-md h-[10vh] flex items-center px-4 md:px-6 z-50 relative">
+      {/* Logo */}
+      <div className="flex items-center">
+        <img
+          src="/images/profile.png"
+          alt="Logo"
+          className="w-14 object-cover"
+        />
+      </div>
+
+      {/* Navigation desktop */}
+      <nav className="hidden md:flex ml-auto">
+        <ul className="flex gap-6 text-lg">
+          {navItems.map((item) => (
+            <li key={item.to}>
+              <Link
+                to={item.to}
+                className="hover:text-color2 transition-colors"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
 
-      {/* Sélecteur de langue */}
-      <div className="h-full flex items-center">
-        <select
-          onChange={changeLanguage}
-          value={i18n.language}
-          className="bg-[#52341B] text-white "
+      {/* Language selector + social links */}
+      <div className="relative ml-auto md:ml-6 flex items-center gap-4">
+        {/* Sélecteur de langue */}
+        <div className="relative">
+          <button
+            onClick={toggleLangMenu}
+            className="p-1 rounded cursor-pointer"
+          >
+            <img
+              src={
+                i18n.language === "fr"
+                  ? "https://img.icons8.com/color/48/france-circular.png"
+                  : "https://img.icons8.com/fluency/48/great-britain-circular.png"
+              }
+              alt={i18n.language}
+              className="w-8 h-8"
+            />
+          </button>
+
+          {langOpen && (
+            <ul className="absolute right-0 mt-2 bg-color3 rounded shadow-md z-50 w-10 flex flex-col items-center">
+              {i18n.language !== "fr" && (
+                <li>
+                  <button
+                    onClick={() => changeLanguage("fr")}
+                    className="py-1 w-full"
+                  >
+                    <img
+                      src="https://img.icons8.com/color/48/france-circular.png"
+                      alt="fr"
+                      className="w-8 h-8"
+                    />
+                  </button>
+                </li>
+              )}
+              {i18n.language !== "en" && (
+                <li>
+                  <button
+                    onClick={() => changeLanguage("en")}
+                    className="py-1 w-full"
+                  >
+                    <img
+                      src="https://img.icons8.com/fluency/48/great-britain-circular.png"
+                      alt="en"
+                      className="w-8 h-8"
+                    />
+                  </button>
+                </li>
+              )}
+            </ul>
+          )}
+        </div>
+
+        {/* Liens sociaux */}
+        <a
+          href="https://github.com/Seb-Dupre"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-color4 hover:text-color2 transition-colors"
         >
-          <option value="fr">🇫🇷 Français</option>
-          <option value="en">🇬🇧 English</option>
-        </select>
+          <FontAwesomeIcon icon={faGithub} size="lg" />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-color4 hover:text-color2 transition-colors"
+        >
+          <FontAwesomeIcon icon={faLinkedin} size="lg" />
+        </a>
       </div>
     </header>
   );

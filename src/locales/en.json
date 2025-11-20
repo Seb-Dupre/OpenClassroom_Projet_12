@@ -11,7 +11,7 @@
     "loading": "Loading projects...",
     "aboutTitle": "About me",
     "aboutText": "Student as a web integrator at OpenClassrooms, I aim to deepen my knowledge.",
-    "aboutButton": "Go to About",
+    "aboutButton": "More about me",
     "latestToolsTitle": "My latest learned tools",
     "contactTitle": "Contact",
     "contactText": "Any questions, or a project in mind?",
@@ -32,7 +32,8 @@
     "title": "My projects",
     "favorites": "Favorite projects",
     "all": "All projects",
-    "filter": "Filter by technology"
+    "filter": "Filter by technology",
+    "githubLink": "Go to GitHub's repo >"
   },
   "contact": {
     "title": "Contact me",

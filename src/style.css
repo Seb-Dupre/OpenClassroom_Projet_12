@@ -1,7 +1,51 @@
 @import "tailwindcss";
-.project-image {
-  width: 100%;
-  max-width: 500px; 
-  height: 300px; 
-  object-fit: cover;  
+
+@theme {
+  --color-color1: #DBC9B8; /*beige*/
+  --color-color2: #FA9224; /*orange*/
+  --color-color3: #52341B; /*brown*/
+  --color-color3_dark: #2c1a0a;
+  --color-color4: #FFFFFF; /*white*/
+  --color-inactive: #49433e; /*inactive button */ 
+}
+@layer utilities {
+  /* Slide in depuis la droite */
+  @keyframes slide-in-right {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+  }
+
+  /* Slide out vers la gauche */
+  @keyframes slide-out-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Slide in depuis la gauche */
+  @keyframes slide-in-left {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+
+  /* Slide out vers la droite */
+  @keyframes slide-out-right {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.5s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.5s ease-out forwards;
+  }
+
+  .animate-slide-out-left {
+    animation: slide-out-left 0.5s ease-out forwards;
+  }
+
+  .animate-slide-out-right {
+    animation: slide-out-right 0.5s ease-out forwards;
+  }
 }

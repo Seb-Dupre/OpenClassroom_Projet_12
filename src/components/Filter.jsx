@@ -19,11 +19,28 @@ export default function Filter({ items, onFilter }) {
   };
 
   return (
-    <div>
-      <button onClick={() => handleFilter("all")}>Tous</button>
+    <div className="flex flex-wrap justify-center gap-3 mb-6">
+      <button
+        onClick={() => handleFilter("all")}
+        className={`px-4 py-2 rounded font-medium transition-colors ${
+          selectedTag === "all"
+            ? "bg-color2 text-color3"
+            : "bg-color4 text-color3 hover:bg-color2 hover:text-color4 "
+        }`}
+      >
+        Tous
+      </button>
 
       {tags.map((tag) => (
-        <button key={tag} onClick={() => handleFilter(tag)}>
+        <button
+          key={tag}
+          onClick={() => handleFilter(tag)}
+          className={`px-4 py-2 rounded font-medium transition-colors cursor-pointer ${
+            selectedTag === tag
+              ? "bg-color2 text-color3"
+              : "bg-color4 text-color3 hover:bg-color2 hover:text-color4"
+          }`}
+        >
           {tag}
         </button>
       ))}
