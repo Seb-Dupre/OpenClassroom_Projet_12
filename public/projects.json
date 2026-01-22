@@ -1,35 +1,119 @@
 [
   {
     "id": 1,
-    "title": "Projet 1",
-    "image": "/images/493861363_OpenClassrooms_Image.png",
+    "title": "Riding Cities",
+    "image": "/images/projects/Riding Cities.webp",
+    "alt": "Screenshot of the Riding Cities project",
     "tags": ["HTML"],
     "favorite": true,
-    "url": "https://github.com/projet1"
+    "url": "https://github.com/Seb-Dupre/OpenClassroom_Projet_2",
+    "description": {
+      "fr": "Premier projet HTML-CSS de la formation Integrateur Web de OpenClassrooms",
+      "en": "Test one"
+    }
   },
   {
     "id": 2,
-    "title": "Projet 2",
-    "image": "/images/Artboard 1_0.png",
-    "tags": ["JavaScript", "HTML", "CSS"],
+    "title": "Booki",
+    "image": "/images/projects/Booki.webp",
+    "alt": "Screenshot of the Booki project",
+    "tags": ["HTML", "CSS"],
     "favorite": true,
-    "url": "https://github.com/projet2"
-
+    "url": "https://github.com/Seb-Dupre/OpenClassroom_Projet_3",
+    "description": {
+      "fr": "Teste deux ",
+      "en": "Test Two"
+    }
   },
   {
     "id": 3,
-    "title": "Projet 3",
-    "image": "/images/openclassrooms-1.jpg",
-    "tags": ["React"],
+    "title": "Oh My Food",
+    "image": "/images/projects/OhMyFood.webp",
+    "alt": "Screenshot of the Oh My Food project",
+    "tags": ["HTML", "SASS"],
     "favorite": true,
-    "url": "https://github.com/projet3"
+    "url": "https://github.com/Seb-Dupre/Openclassrooms-Projet-4-OhMyFood",
+    "description": {
+      "fr": "",
+      "en": ""
+    }
   },
   {
     "id": 4,
-    "title": "Projet 4",
-    "image": "/images/openclassrooms.jpg",
-    "tags": ["React", "JavaScript"],
+    "title": "Print It",
+    "image": "/images/projects/PrintIt.webp",
+    "alt": "Screenshot of the Print It project",
+    "tags": ["JavaScript"],
     "favorite": false,
-    "url": "https://github.com/projet4"
+    "url": "https://github.com/Seb-Dupre/Projet-5__Print-it",
+    "description": {
+      "fr": "Teste Quatre",
+      "en": "Test Four"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Portfolio de Sophie Bluel",
+    "image": "/images/projects/SophieBluel.webp",
+    "alt": "Screenshot of the Sophie Bluel portfolio project",
+    "tags": ["JavaScript"],
+    "favorite": false,
+    "url": "https://github.com/Seb-Dupre/OpenClassrooms-Projet-6",
+    "description": {
+      "fr": "Teste Quatre",
+      "en": "Test Four"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Kasa",
+    "image": "/images/projects/Kasa.webp",
+    "alt": "Screenshot of the Kasa web application",
+    "tags": ["React"],
+    "favorite": false,
+    "url": "https://github.com/Seb-Dupre/OC---Projet-8",
+    "description": {
+      "fr": "Teste Quatre",
+      "en": "Test Four"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Portfolio de Nina Carducci",
+    "image": "/images/projects/Nina.webp",
+    "alt": "Screenshot of the Nina Carducci portfolio project",
+    "tags": ["HTML","SEO"],
+    "favorite": false,
+    "url": "https://github.com/Seb-Dupre/OpenClassroom_Projet_9",
+    "description": {
+      "fr": "",
+      "en": "Test Four"
+    }
+  },
+  {
+    "id": 8,
+    "title": "724 Events",
+    "image": "/images/projects/724events.webp",
+    "alt": "Screenshot of the 724 Events website",
+    "tags": ["JavaScript"],
+    "favorite": false,
+    "url": "https://github.com/Seb-Dupre/OpenClassroom_Projet_10",
+    "description": {
+      "fr": "Teste Quatre",
+      "en": "Test Four"
+    }
+  },
+  {
+    "id": 9,
+    "title": "Argent Bank",
+    "image": "/images/projects/ArgentBank.webp",
+    "alt": "Screenshot of the Argent Bank web application",
+    "tags": ["React"],
+    "favorite": false,
+    "url": "https://github.com/Seb-Dupre/OpenClassroom_Projet_11-React",
+    "description": {
+      "fr": "Teste Quatre",
+      "en": "Test Four"
+    }
   }
 ]

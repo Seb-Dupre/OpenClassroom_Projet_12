@@ -2,36 +2,43 @@
   {
     "name": "HTML5",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    "alt": "HTML5 logo",
     "level": 90
   },
   {
     "name": "CSS3",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    "alt": "CSS3 logo",
     "level": 85
   },
   {
     "name": "GitHub",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    "alt": "GitHub logo",
     "level": 75
   },
   {
     "name": "JavaScript",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    "alt": "JavaScript logo",
     "level": 60
   },
   {
     "name": "React",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "alt": "React logo",
     "level": 60
   },
   {
     "name": "Redux",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    "alt": "Redux logo",
     "level": 25
   },
   {
     "name": "TailwindCSS",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    "level": 25
+    "alt": "Tailwind CSS logo",
+    "level": 35
   }
 ]

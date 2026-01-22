@@ -1,26 +1,41 @@
+import { useEffect, useState } from "react";
+
 export default function SkillCard({
   name,
   icon,
-  level = 70,
+  alt,
+  level = 50,
   showLevel = true,
+  skillIconSize = "",
+  skillTitle = "",
 }) {
+  const [progress, setProgress] = useState(0);
+
+  //temps d'attente pour que l'on voit l'animation des cartes
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setProgress(level);
+    }, 300);
+
+    return () => clearTimeout(timeout);
+  }, [level]);
+
   return (
-    <div className="flex flex-col items-center text-center w-50 md:w-36">
+    <div className="flex flex-col items-center text-center">
       <img
         src={icon}
-        alt={name}
-        className="w-40  md:w-20 md:h-20 object-contain mb-2"
+        alt={alt}
+        className={`object-contain mb-2 ${skillIconSize}`}
       />
 
-      <p className="text-color3 font-medium text-lg md:text-xl mb-2">{name}</p>
+      <p className={`text-color3 font-medium mb-2 ${skillTitle}`}>{name}</p>
 
-      {/* Barre de progression — affichée seulement si showLevel = true */}
       {showLevel && (
-        <div className="w-full bg-color4 rounded-full h-3 shadow-inner">
+        <div className="w-full bg-color4 rounded-full h-3 shadow-inner overflow-hidden">
           <div
-            className="bg-color2 h-3 rounded-full transition-all"
-            style={{ width: `${level}%` }}
-          ></div>
+            className="bg-color2 h-3 rounded-full transition-all duration-1000 ease-out"
+            style={{ width: `${progress}%` }}
+          />
         </div>
       )}
     </div>

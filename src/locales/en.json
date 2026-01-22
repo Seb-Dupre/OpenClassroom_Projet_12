@@ -6,6 +6,11 @@
     "veille": "Tech Watch",
     "contact": "Contact"
   },
+    "project": {
+    "noDescription": "No description available.",
+    "githubButton": "🔗 View on GitHub"
+  },
+
   "home": {
     "welcome": "Welcome to my portfolio",
     "loading": "Loading projects...",
@@ -17,20 +22,24 @@
     "contactText": "Any questions, or a project in mind?",
     "contactButton": "Contact me"
   },
+  
+
   "about": {
-    "title": "About me",
+    "title": "About",
     "description": "I am a developer passionate about building modern and high-performance web applications.",
-    "descriptionExtended": "As a web integrator student at OpenClassrooms, I strive to deepen my technical expertise and improve my front-end development skills.",
+    "descriptionExtended": "Web integration student at OpenClassrooms, I aim to create more projects, especially personal ones, in order to make the most of my learning and further develop my skills.\n\nCurrently, my preferred tools are React and Tailwind CSS, which I use to build modern, responsive, and performant user interfaces.\n\nI do not intend to stop at front-end development and plan to learn back-end technologies as well, with the goal of becoming a full-stack developer.",
     "section": {
-      "aboutMe": "About me",
-      "training": "Training",
+      "biography": "Biography",
+      "training": "Education",
       "skills": "Skills"
     },
-    "skillsSection": "My skills."
+    "skillsSection": "My Skills.",
+    "trainingSection": "My Diplomas.",
+    "bioSection": "About me."
   },
   "projects": {
     "title": "My projects",
-    "favorites": "Favorite projects",
+    "favorites": "My favorite projects",
     "all": "All projects",
     "filter": "Filter by technology",
     "githubLink": "Go to GitHub's repo >"
@@ -40,7 +49,12 @@
     "name": "Name",
     "email": "Email",
     "message": "Message",
-    "send": "Send"
+    "send": "Send",
+    "label":{
+      "name": "Your Name.",
+      "email": "Your E-mail adress.",
+      "message": "Your message."
+    }
   },
   "courses": {
     "title": "Courses & Experience",
@@ -55,10 +69,7 @@
     "techList": ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
     "softList": ["Problem Solving", "Teamwork", "Adaptability", "Communication"]
   },
-  "veille": {
-    "title": "Tech Watch & Blog",
-    "article1": "React Native 0.82",
-    "article2": "Introduction to TypeScript",
-    "article3": "What's new in JavaScript ES2025"
+    "404" : {
+    "link" : "This page could not be found, return to home page."
   }
 }

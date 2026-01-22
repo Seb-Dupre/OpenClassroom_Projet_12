@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="bg-color3_dark text-color4 shadow-md h-[10vh] flex flex-col items-center justify-center gap-2 text-sm">
-      {/* Mention obligatoire Icons8 */}
+    <footer className="bg-color3_dark text-color4 shadow-md h-[10vh] flex flex-col items-center justify-center gap-2 text-sm ">
+      {/* Obligatoiry mention Icons8 */}
       <p>
         Icons by{" "}
         <a

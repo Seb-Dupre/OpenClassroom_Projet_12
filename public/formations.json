@@ -11,5 +11,44 @@
       "en": "A complete training focused on modern front-end development, accessibility, and best practices."
     },
     "tags": ["HTML", "CSS", "JavaScript", "React", "VS Code","Sass","Redux","GitHub"]
+  },
+   {
+    "id": 2,
+    "logo": "/images/OC logo.webp",
+    "title": {
+      "fr": "Intégrateur Web aaaaa aaa aaaaaaaa aaaaaaa aaaaaaa aaaaaaaa aaaa aaaa",
+      "en": "Web Integrator "
+    },
+    "description": {
+      "fr": "Une formation complète axée sur le développement front-end moderne, l'accessibilité et les bonnes pratiquesaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaa aaaaa aaaaaa aaaaaaa aaaa aaaaaa.",
+      "en": "A complete training focused on modern front-end development, accessibility, and best practices." 
+    },
+    "tags": ["HTML", "CSS", "JavaScript", "React", "VS Code","Sass","Redux","GitHub"]
+  },
+   {
+    "id": 3,
+    "logo": "/images/OC logo.webp",
+    "title": {
+      "fr": "Intégrateur Web",
+      "en": "Web Integrator "
+    },
+    "description": {
+      "fr": "Une formation complète axée sur le développement front-end moderne, l'accessibilité et les bonnes pratiques.",
+      "en": "A complete training focused on modern front-end development, accessibility, and best practices."
+    },
+    "tags": ["HTML", "CSS", "JavaScript", "React", "VS Code","Sass","Redux","GitHub"]
+  },
+   {
+    "id": 4,
+    "logo": "/images/OC logo.webp",
+    "title": {
+      "fr": "Intégrateur Web",
+      "en": "Web Integrator "
+    },
+    "description": {
+      "fr": "Une formation complète axée sur le développement front-end moderne, l'accessibilité et les bonnes pratiques.",
+      "en": "A complete training focused on modern front-end development, accessibility, and best practices."
+    },
+    "tags": ["HTML", "CSS", "JavaScript", "React", "VS Code","Sass","Redux","GitHub"]
   }
 ]

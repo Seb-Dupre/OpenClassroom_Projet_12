@@ -5,6 +5,10 @@
     "projects": "Projets",
     "veille": "Veille",
     "contact": "Contact"
+  }, 
+   "project": {
+    "noDescription": "Aucune description pour le moment.",
+    "githubButton": "🔗 Voir sur GitHub"
   },
   "home": {
     "welcome": "Bienvenue sur mon portfolio",
@@ -18,29 +22,37 @@
     "contactButton": "Contactez-moi"
   },
   "about": {
-    "title": "À propos de moi",
+    "title": "À propos",
     "description": "Je suis un développeur passionné par la création d'applications web modernes et performantes.",
-    "descriptionExtended": "Étudiant en tant qu'intégrateur web sur OpenClassrooms, je souhaite approfondir mes connaissances et continuer à progresser dans le domaine du développement front-end.",
+    "descriptionExtended": "Étudiant intégrateur web chez OpenClassrooms, je souhaite créer davantage de projets, notamment personnels, afin de mettre à profit mon apprentissage et d’approfondir mes connaissances.\n\nActuellement, mes outils préférés sont React et Tailwind CSS, que j’utilise pour concevoir des interfaces modernes, responsives et performantes.\n\nJe ne compte pas m’arrêter au front-end et souhaite également me former au back-end, avec l’objectif de devenir développeur full-stack.",
     "section": {
-      "aboutMe": "À propos de moi",
+      "biography": "Biographie",
       "training": "Formations",
       "skills": "Compétences"
     },
-    "skillsSection": "Mes compétences."
+    "skillsSection": "Mes Competences.",
+    "trainingSection": "Mes Formations.",
+    "bioSection": "À propos de moi."
   },
   "projects": {
     "title": "Mes projets",
-    "favorites": "Projets favoris",
+    "favorites": " Mes projets favoris",
     "all": "Tous les projets",
     "filter": "Filtrer par technologie",
-    "githubLink": "Vers le repo GitHub >"
+    "githubLink": "Voir sur GitHub"
+
   },
   "contact": {
     "title": "Contactez-moi",
     "name": "Nom",
     "email": "Email",
     "message": "Message",
-    "send": "Envoyer"
+    "send": "Envoyer",
+    "label":{
+      "name": "Votre Nom.",
+      "email": "Votre adresse E-mail.",
+      "message": "Votre message."
+    }
   },
   "courses": {
     "title": "Parcours & Expériences",
@@ -55,10 +67,8 @@
     "techList": ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
     "softList": ["Résolution de problèmes", "Travail en équipe", "Adaptabilité", "Communication"]
   },
-  "veille": {
-    "title": "Veille & Blog",
-    "article1": "React Native 0.82",
-    "article2": "Introduction à TypeScript",
-    "article3": "Les nouveautés de JavaScript ES2025"
+  "404" : {
+    "link" : "Page introuvable, retour vers la page d'Accueil."
   }
 }
+

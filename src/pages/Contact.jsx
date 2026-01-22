@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
+import Container from "../components/Container";
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -42,7 +43,7 @@ export default function Contact() {
           email: email, // Reply To: {{email}}
           message: message, // Message: {{message}}
         },
-        publicKey
+        publicKey,
       )
       .then(
         (response) => {
@@ -55,7 +56,7 @@ export default function Contact() {
         (error) => {
           console.log("FAILED...", error);
           setStatus("error");
-        }
+        },
       );
   };
 
@@ -67,30 +68,40 @@ export default function Contact() {
 
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-2xl bg-color4 rounded-2xl shadow-md p-6 md:p-10 flex flex-col gap-6"
+        className="w-full max-w-2xl bg-color4 rounded-2xl shadow-md p-6 md:p-10 flex flex-col gap-6 text-color3 font-semibold text-lg"
       >
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder={t("contact.name")}
-          className="w-full p-3 rounded-lg border border-color3 focus:outline-none focus:ring-2 focus:ring-color2 transition"
-        />
-
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder={t("contact.email")}
-          className="w-full p-3 rounded-lg border border-color3 focus:outline-none focus:ring-2 focus:ring-color2 transition"
-        />
-
-        <textarea
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder={t("contact.message")}
-          className="w-full p-3 rounded-lg border border-color3 focus:outline-none focus:ring-2 focus:ring-color2 transition h-40 resize-none"
-        ></textarea>
+        <div>
+          <label htmlFor="name">{t("contact.label.name")} </label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder={t("contact.name")}
+            className="w-full p-3 rounded-lg border border-color3 focus:outline-none focus:ring-2 focus:ring-color2 transition"
+          />
+        </div>
+        <div>
+          <label htmlFor="email">{t("contact.label.email")} </label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder={t("contact.email")}
+            className="w-full p-3 rounded-lg border border-color3 focus:outline-none focus:ring-2 focus:ring-color2 transition"
+          />
+        </div>
+        <div>
+          <label htmlFor="message">{t("contact.label.message")} </label>
+          <textarea
+            value={message}
+            id="message"
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder={t("contact.message")}
+            className="w-full p-3 rounded-lg border border-color3 focus:outline-none focus:ring-2 focus:ring-color2 transition h-40 resize-none"
+          ></textarea>
+        </div>
 
         <button
           type="submit"
@@ -105,7 +116,7 @@ export default function Contact() {
         </button>
 
         {status === "success" && (
-          <p className="text-color2 mt-2">Message envoyé avec succès !</p>
+          <p className="text-color2_dark font-bold text-xl mt-2">Message envoyé avec succès !</p>
         )}
         {status === "error" && (
           <p className="text-red-600 mt-2">
