@@ -18,7 +18,7 @@
     "image": "/images/projects/Booki.webp",
     "alt": "Screenshot of the Booki project",
     "tags": ["HTML", "CSS"],
-    "favorite": true,
+    "favorite": false,
     "url": "https://github.com/Seb-Dupre/OpenClassroom_Projet_3",
     "description": {
       "fr": "Teste deux ",
@@ -114,6 +114,19 @@
     "description": {
       "fr": "Teste Quatre",
       "en": "Test Four"
+    }
+  },
+   {
+    "id": 10,
+    "title": "Bingo de Noel, Final Fantasy XIV",
+    "image": "/images/projects/BingoNoel.webp",
+    "alt": "Screenshot of personnal project, Christmas Bingo, for the game FFXIV",
+    "tags": ["React, tailwind, CSS"],
+    "favorite": true,
+    "url": "https://github.com/Seb-Dupre/Final-Fantasy-XIV-Bingo-de-noel-",
+    "description": {
+      "fr": "Projet personnel développé en React pour organiser un bingo de Noël entre amis sur Final Fantasy XIV. L'application permet de tirer les numéros et offre également au gagnant la possibilité de choisir son lot de manière aléatoire. C'est mon premier projet personnel.",
+      "en": "Personal React project created for a Christmas bingo event with friends on Final Fantasy XIV. The application is a single-page app that handles number draws and allows the winner to choose a prize at random. This project represents my first personal development project."
     }
   }
 ]

@@ -85,14 +85,12 @@ export default function Projects() {
                         {project.url && (
                           <div
                             className="absolute inset-0 bg-black flex items-center justify-center opacity-0 group-hover:opacity-80 transition-opacity rounded-2xl cursor-pointer"
-                            onClick={() =>
-                              window.open(project.url, "_blank")
-                            }
+                            onClick={() => window.open(project.url, "_blank")}
                           >
                             <span className="text-white text-lg md:text-xl font-semibold">
                               {t(
                                 "projects.githubLink",
-                                "Vers le repo GitHub >"
+                                "Vers le repo GitHub >",
                               )}
                             </span>
                           </div>
@@ -114,7 +112,7 @@ export default function Projects() {
                     {/* Texte et Titre Desktop*/}
                     <div
                       className={`w-full md:w-[40%] flex flex-col justify-start ${
-                        isOdd ? "text-right pr-4" : "text-left"
+                        isOdd ? "md:text-right pr-4" : "md:text-left"
                       }`}
                     >
                       {/* Titre Desktop */}
@@ -124,16 +122,14 @@ export default function Projects() {
 
                       {/* Description */}
                       <p
-                        className={`text-lg text-color3 leading-relaxed px-10 ${
-                          isOdd
-                            ? "text-left md:text-right"
-                            : "text-left"
+                        className={`text-lg text-color3 leading-relaxed px-10 md:px-0 ${
+                          isOdd ? " md:text-right" : "md:text-left"
                         }`}
                       >
                         {project.description?.[i18n.language] ||
                           t(
                             "projects.noDescription",
-                            "Description non disponible"
+                            "Description non disponible",
                           )}
                       </p>
                     </div>

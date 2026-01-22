@@ -8,7 +8,7 @@ export default function Footer() {
           href="https://icons8.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-color2 hover:underline"
+          className="text-color2 hover:text-color1_light underline font-semibold"
         >
           Icons8
         </a>

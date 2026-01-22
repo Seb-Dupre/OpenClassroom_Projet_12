@@ -7,7 +7,7 @@ export default function Dots({
 }) {
   return (
     <div
-      className={`mt-4 flex w-full justify-center gap-2 ${className}`}
+      className={`mt-4 flex w-full justify-center gap-3 ${className}`}
     >
       {Array.from({ length: total }).map((_, i) => (
         <button

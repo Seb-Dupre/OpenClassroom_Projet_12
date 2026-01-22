@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
 import SlideOverlay from "./shared/SlideOverlay";
@@ -7,8 +7,6 @@ import GradientEdges from "./shared/GradientEdges";
 import ProjectModal from "../ProjectModal";
 import { SPRING_OPTIONS } from "./shared/animation";
 
-const ONE_SECOND = 1000;
-const AUTO_DELAY = ONE_SECOND * 10;
 const DRAG_BUFFER = 50;
 
 export default function SwipeCarousel({ slides = [] }) {
@@ -17,19 +15,6 @@ export default function SwipeCarousel({ slides = [] }) {
 
   const dragX = useMotionValue(0);
   const total = slides.length;
-
-  //Stop auto-slide when modal is open
-  useEffect(() => {
-    if (modalOpen) return;
-
-    const interval = setInterval(() => {
-      if (dragX.get() === 0) {
-        setIndex((prev) => (prev + 1) % total);
-      }
-    }, AUTO_DELAY);
-
-    return () => clearInterval(interval);
-  }, [total, modalOpen]);
 
   const onDragEnd = () => {
     if (modalOpen) return;
@@ -57,16 +42,39 @@ export default function SwipeCarousel({ slides = [] }) {
         {slides.map((slide, i) => (
           <motion.div
             key={slide.id || i}
-            className="w-full shrink-0 h-[60vh]  rounded-lg  bg-neutral-900 p-3  flex flex-col justify-end"
-            style={{
-              backgroundImage: `url(${slide.image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            className="
+              relative
+              w-full
+              shrink-0
+              rounded-lg
+              bg-neutral-900
+              p-3
+              flex
+              flex-col
+              justify-end
+              aspect-[16/9]
+              overflow-hidden
+            "
             animate={{ scale: index === i ? 0.97 : 0.9 }}
             transition={SPRING_OPTIONS}
           >
-            <div onClick={() => setModalOpen(true)}>
+            {/* Image (n'intercepte pas les events) */}
+            <img
+              src={slide.image}
+              alt={slide.title}
+              width={1200}
+              height={675}
+              loading="lazy"
+              className="
+                absolute inset-0
+                w-full h-full
+                object-cover
+                pointer-events-none
+              "
+            />
+
+            {/* Overlay interactif */}
+            <div className="relative z-10" onClick={() => setModalOpen(true)}>
               <SlideOverlay
                 title={slide.title}
                 tags={slide.tags}
