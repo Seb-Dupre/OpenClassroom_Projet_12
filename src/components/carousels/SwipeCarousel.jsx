@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
-
 import SlideOverlay from "./shared/SlideOverlay";
 import Dots from "./shared/Dots";
 import GradientEdges from "./shared/GradientEdges";
@@ -17,14 +16,19 @@ export default function SwipeCarousel({ slides = [] }) {
   const total = slides.length;
 
   const onDragEnd = () => {
-    if (modalOpen) return;
+    if (modalOpen || total === 0) return;
 
     const x = dragX.get();
     if (x <= -DRAG_BUFFER) setIndex((prev) => (prev + 1) % total);
     else if (x >= DRAG_BUFFER) setIndex((prev) => (prev - 1 + total) % total);
   };
 
-  if (slides.length === 0) return null;
+  // PLACEHOLDER
+  if (total === 0) {
+    return (
+      <div className="bg-inactive h-[56vw] max-h-[300px]" />
+    );
+  }
 
   const currentSlide = slides[index];
 
@@ -52,13 +56,13 @@ export default function SwipeCarousel({ slides = [] }) {
               flex
               flex-col
               justify-end
-              aspect-[16/9]
               overflow-hidden
+              aspect-video
             "
             animate={{ scale: index === i ? 0.97 : 0.9 }}
             transition={SPRING_OPTIONS}
           >
-            {/* Image (n'intercepte pas les events) */}
+            {/* Image */}
             <img
               src={slide.image}
               alt={slide.title}
@@ -73,7 +77,7 @@ export default function SwipeCarousel({ slides = [] }) {
               "
             />
 
-            {/* Overlay interactif */}
+            {/* Overlay */}
             <div className="relative z-10" onClick={() => setModalOpen(true)}>
               <SlideOverlay
                 title={slide.title}
@@ -85,14 +89,21 @@ export default function SwipeCarousel({ slides = [] }) {
         ))}
       </motion.div>
 
-      <Dots current={index} total={total} onClick={setIndex} />
+      {/* DOTS avec espace réservé */}
+      <div className="h-[32px] mt-4">
+        <Dots current={index} total={total} onClick={setIndex} />
+      </div>
+
       <GradientEdges />
 
-      <ProjectModal
-        project={currentSlide}
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-      />
+      {/* MODAL seulement si ouvert */}
+      {modalOpen && (
+        <ProjectModal
+          project={currentSlide}
+          open={modalOpen}
+          onClose={() => setModalOpen(false)}
+        />
+      )}
     </div>
   );
 }

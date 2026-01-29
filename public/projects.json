@@ -5,11 +5,11 @@
     "image": "/images/projects/Riding Cities.webp",
     "alt": "Screenshot of the Riding Cities project",
     "tags": ["HTML"],
-    "favorite": true,
+    "favorite": false,
     "url": "https://github.com/Seb-Dupre/OpenClassroom_Projet_2",
     "description": {
-      "fr": "Premier projet HTML-CSS de la formation Integrateur Web de OpenClassrooms",
-      "en": "Test one"
+      "fr": "Premier projet HTML/CSS d'OpenClassrooms en tant qu'intégrateur web. Le projet consiste à mettre à jour la page d'un site déjà existant. Le CSS étant déjà fourni, nous devions nous occuper de l'HTML et attribuer les bonnes classes à nos ajouts et modifications. Les changements sont réalisés en suivant la maquette Figma fournie. Il fallait notamment ajouter une section « Membres fondateurs » et mettre à jour la section « Découvrez nos cours ».",
+      "en": "First HTML/CSS project at OpenClassrooms as a web integrator. The goal of the project was to update an existing website page. Since the CSS was already provided, we had to work on the HTML and assign the correct classes to our additions and modifications. All changes were made following the provided Figma mockup. We notably had to add a \"Founding Members\" section and update the \"Discover our courses\" section."
     }
   },
   {
@@ -21,8 +21,8 @@
     "favorite": false,
     "url": "https://github.com/Seb-Dupre/OpenClassroom_Projet_3",
     "description": {
-      "fr": "Teste deux ",
-      "en": "Test Two"
+      "fr": "Deuxième projet HTML/CSS d'OpenClassrooms en tant qu'intégrateur web. Intégration de l'interface d'un site d'hébergement et d'activités. Objectifs : apprendre la structure d'un site (header, main, footer, sections), rendre le site responsive (adapter la position et la taille des éléments selon la taille de l'écran) et approfondir les connaissances en HTML et CSS.",
+      "en": "Second HTML/CSS project at OpenClassrooms as a web integrator. Integration of the interface for an accommodation and activities website. Goals: learn the structure of a website (header, main, footer, sections), make the site responsive (adapt element positions and sizes depending on screen size), and deepen HTML and CSS knowledge."
     }
   },
   {
@@ -34,8 +34,8 @@
     "favorite": true,
     "url": "https://github.com/Seb-Dupre/Openclassrooms-Projet-4-OhMyFood",
     "description": {
-      "fr": "",
-      "en": ""
+      "fr": "Troisième projet HTML/CSS/SASS d'OpenClassrooms en tant qu'intégrateur web. Premier site créé sans aucune base de code fournie. Un index contient des cartes de restaurants menant chacune vers une page dédiée avec le menu du restaurant sélectionné. Première utilisation de SASS à la place du CSS classique, ainsi que première utilisation d'animations.",
+      "en": "Third HTML/CSS/SASS project at OpenClassrooms as a web integrator. First website created without any provided code base. An index page displays restaurant cards, each linking to a dedicated page showing the selected restaurant's menu. First use of SASS instead of plain CSS, as well as first implementation of animations."
     }
   },
   {
@@ -47,8 +47,8 @@
     "favorite": false,
     "url": "https://github.com/Seb-Dupre/Projet-5__Print-it",
     "description": {
-      "fr": "Teste Quatre",
-      "en": "Test Four"
+      "fr": "Cinquième projet d'OpenClassrooms en tant qu'intégrateur web, et premier projet en JavaScript. Le projet consiste à créer un carrousel avec des flèches et des points de navigation, fonctionnant en boucle infinie. Ce projet permet de faire un premier pas en JavaScript, d'apprendre à utiliser les event listeners et les conditions.",
+      "en": "Fifth project at OpenClassrooms as a web integrator and first JavaScript project. The goal was to create a carousel with arrows and navigation dots, running in an infinite loop. This project allowed me to take my first steps in JavaScript and learn how to use event listeners and conditional logic."
     }
   },
   {
@@ -60,8 +60,8 @@
     "favorite": false,
     "url": "https://github.com/Seb-Dupre/OpenClassrooms-Projet-6",
     "description": {
-      "fr": "Teste Quatre",
-      "en": "Test Four"
+      "fr": "Sixième projet d'OpenClassrooms en tant qu'intégrateur web, et deuxième projet en JavaScript. Ce projet nous fait utiliser pour la première fois un Kanban et introduit la gestion dynamique de données via JavaScript.",
+      "en": "Sixth project at OpenClassrooms as a web integrator and second JavaScript project. This project introduced the use of a Kanban board for the first time and dynamic data management with JavaScript."
     }
   },
   {
@@ -70,11 +70,11 @@
     "image": "/images/projects/Kasa.webp",
     "alt": "Screenshot of the Kasa web application",
     "tags": ["React"],
-    "favorite": false,
+    "favorite": true,
     "url": "https://github.com/Seb-Dupre/OC---Projet-8",
     "description": {
-      "fr": "Teste Quatre",
-      "en": "Test Four"
+      "fr": "Huitième projet d'OpenClassrooms en tant qu'intégrateur web, et premier projet en React. Objectifs : apprendre à utiliser React et comprendre son utilité, installer un router et créer des routes pour obtenir une application en une seule page (SPA), et identifier quelles parties du site peuvent être transformées en composants réutilisables.",
+      "en": "Eighth project at OpenClassrooms as a web integrator and first React project. Goals: learn how to use React and understand its purpose, set up a router and create routes to build a single-page application (SPA), and identify which parts of the site can be turned into reusable components."
     }
   },
   {
@@ -82,12 +82,12 @@
     "title": "Portfolio de Nina Carducci",
     "image": "/images/projects/Nina.webp",
     "alt": "Screenshot of the Nina Carducci portfolio project",
-    "tags": ["HTML","SEO"],
+    "tags": ["HTML", "SEO"],
     "favorite": false,
     "url": "https://github.com/Seb-Dupre/OpenClassroom_Projet_9",
     "description": {
-      "fr": "",
-      "en": "Test Four"
+      "fr": "Neuvième projet d'OpenClassrooms en tant qu'intégrateur web, axé sur le SEO. L'objectif est d'améliorer les résultats Lighthouse afin d'obtenir de meilleures performances, une meilleure accessibilité, de bonnes pratiques et une meilleure visibilité sur le moteur de recherche Google.",
+      "en": "Ninth project at OpenClassrooms as a web integrator, focused on SEO. The objective was to improve Lighthouse scores to achieve better performance, accessibility, best practices, and better visibility on Google's search engine."
     }
   },
   {
@@ -95,12 +95,12 @@
     "title": "724 Events",
     "image": "/images/projects/724events.webp",
     "alt": "Screenshot of the 724 Events website",
-    "tags": ["JavaScript"],
+    "tags": ["JavaScript", "Yarn"],
     "favorite": false,
     "url": "https://github.com/Seb-Dupre/OpenClassroom_Projet_10",
     "description": {
-      "fr": "Teste Quatre",
-      "en": "Test Four"
+      "fr": "Dixième projet d'OpenClassrooms en tant qu'intégrateur web.",
+      "en": "Tenth project at OpenClassrooms as a web integrator."
     }
   },
   {
@@ -112,21 +112,21 @@
     "favorite": false,
     "url": "https://github.com/Seb-Dupre/OpenClassroom_Projet_11-React",
     "description": {
-      "fr": "Teste Quatre",
-      "en": "Test Four"
+      "fr": "Onzième projet d'OpenClassrooms en tant qu'intégrateur web.",
+      "en": "Eleventh project at OpenClassrooms as a web integrator."
     }
   },
-   {
+  {
     "id": 10,
-    "title": "Bingo de Noel, Final Fantasy XIV",
+    "title": "Bingo de Noël, Final Fantasy XIV",
     "image": "/images/projects/BingoNoel.webp",
-    "alt": "Screenshot of personnal project, Christmas Bingo, for the game FFXIV",
-    "tags": ["React, tailwind, CSS"],
+    "alt": "Screenshot of personal project, Christmas Bingo, for the game FFXIV",
+    "tags": ["React", "tailwind", "CSS"],
     "favorite": true,
     "url": "https://github.com/Seb-Dupre/Final-Fantasy-XIV-Bingo-de-noel-",
     "description": {
       "fr": "Projet personnel développé en React pour organiser un bingo de Noël entre amis sur Final Fantasy XIV. L'application permet de tirer les numéros et offre également au gagnant la possibilité de choisir son lot de manière aléatoire. C'est mon premier projet personnel.",
-      "en": "Personal React project created for a Christmas bingo event with friends on Final Fantasy XIV. The application is a single-page app that handles number draws and allows the winner to choose a prize at random. This project represents my first personal development project."
+      "en": "Personal React project created to organize a Christmas bingo with friends on Final Fantasy XIV. The application allows number draws and gives the winner the ability to choose a prize at random. This was my first personal development project."
     }
   }
 ]

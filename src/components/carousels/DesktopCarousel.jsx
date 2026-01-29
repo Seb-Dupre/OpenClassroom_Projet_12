@@ -6,33 +6,37 @@ import GradientEdges from "./shared/GradientEdges";
 import SlideOverlay from "./shared/SlideOverlay";
 import Dots from "./shared/Dots";
 
-const AUTO_DELAY = 10000;
-const FADE_OPTIONS = { type: "tween", duration: 0.4 };
-
 export default function DesktopCarousel({ slides = [] }) {
   const [index, setIndex] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
   const total = slides.length;
 
   useEffect(() => {
-    if (modalOpen || total === 0) return;
+    if (modalOpen || total < 2) return;
 
     const interval = setInterval(
       () => setIndex((prev) => (prev + 1) % total),
-      AUTO_DELAY,
+      10000,
     );
     return () => clearInterval(interval);
   }, [total, modalOpen]);
 
-  if (!slides || slides.length === 0) return null;
+  if (slides.length === 0) {
+    return (
+      <div
+        className="bg-inactive h-[80vh] max-h-[900px]"
+        
+      />
+    );
+  }
 
   const currentSlide = slides[index];
 
   return (
-    <div className="relative overflow-hidden bg-color3_dark py-8 px-8 z-45">
-      {/* Container  */}
-      <div className="relative aspect-video max-h-[80vh] w-full rounded-xl overflow-hidden">
-        {/* Slides*/}
+    <div className="relative overflow-hidden bg-color3_dark py-8 px-8 flex flex-col items-center">
+      <div
+        className="relative w-full max-w-[1700px] rounded-xl overflow-hidden h-[80vh] max-h-[900px]"
+      >
         {slides.map((slide, i) => (
           <motion.img
             key={slide.id || i}
@@ -43,11 +47,12 @@ export default function DesktopCarousel({ slides = [] }) {
             loading={i === 0 ? "eager" : "lazy"}
             className="absolute inset-0 w-full h-full object-cover"
             animate={{ opacity: i === index ? 1 : 0 }}
-            transition={FADE_OPTIONS}
+            transition={{ type: "tween", duration: 0.4 }}
           />
         ))}
 
-        {/* Overlay */}
+        <GradientEdges />
+
         <div
           className="absolute bottom-4 left-4 cursor-pointer group z-10"
           onClick={() => setModalOpen(true)}
@@ -55,15 +60,12 @@ export default function DesktopCarousel({ slides = [] }) {
           <SlideOverlay
             title={currentSlide.title}
             tags={currentSlide.tags}
-            className="
-              w-[380px]
-              transition-colors
-              group-hover:text-color2
-            "
+            className="w-[380px]"
           />
         </div>
 
-        {/* Navigation */}
+        {/* Chevron gauche */}
+
         <button
           aria-label="Previous slide"
           onClick={() => setIndex((i) => (i - 1 + total) % total)}
@@ -81,17 +83,19 @@ export default function DesktopCarousel({ slides = [] }) {
         </button>
       </div>
 
-      {/* Dots */}
-      <Dots current={index} total={total} onClick={setIndex} />
+      {/* DOTS AVEC HAUTEUR FIXE */}
+      <div className="h-[32px] mt-2">
+        <Dots current={index} total={total} onClick={setIndex} />
+      </div>
 
-      <GradientEdges />
-
-      {/* Modal */}
-      <ProjectModal
-        project={currentSlide}
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-      />
+      {/* MODAL SEULEMENT SI OUVERT */}
+      {modalOpen && (
+        <ProjectModal
+          project={currentSlide}
+          open={modalOpen}
+          onClose={() => setModalOpen(false)}
+        />
+      )}
     </div>
   );
 }

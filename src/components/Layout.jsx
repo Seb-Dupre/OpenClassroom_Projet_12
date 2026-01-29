@@ -31,7 +31,7 @@ export default function Layout({ children }) {
 
       <Header />
 
-      <main className="flex-1 bg-color1_light">
+      <main className="flex-1 bg-linear-to-b from-color1_light to-color1">
         {children}
       </main>
 

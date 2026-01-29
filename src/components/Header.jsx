@@ -38,11 +38,11 @@ export default function Header() {
   return (
     <header className="bg-color3 text-white shadow-md  z-50 relative">
       <Container>
-        <div className="flex items-center  h-[10vh]">
+        <div className="flex items-center  h-22">
           {/* Logo */}
           <div className="flex items-center">
             <img
-              src="/images/profile.png"
+              src="/images/profile_header.webp"
               alt="My logo"
               className="h-20 object-cover"
             />

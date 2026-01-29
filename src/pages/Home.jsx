@@ -11,36 +11,25 @@ export default function Home() {
   const [latestProjects, setLatestProjects] = useState([]);
   const [tools, setTools] = useState([]);
 
-  // Charger les projets
   useEffect(() => {
     fetch("/projects.json")
       .then((res) => res.json())
       .then((data) => {
         setProjects(data);
         setLatestProjects(data.slice(-3));
-      })
-      .catch((err) =>
-        console.error("Erreur lors du chargement des projets :", err),
-      );
+      });
   }, []);
 
-  // Charger les outils
   useEffect(() => {
     fetch("/tools.json")
       .then((res) => res.json())
-      .then((data) => setTools(data))
-      .catch((err) =>
-        console.error("Erreur lors du chargement des outils :", err),
-      );
+      .then((data) => setTools(data));
   }, []);
 
   return (
     <div className="w-full overflow-x-hidden">
-      {/* Hero: ResponsiveCarousel */}
-      {latestProjects.length > 0 && (
-        <ResponsiveCarousel slides={latestProjects} />
-      )}
-
+      {/* Hero*/}
+      <ResponsiveCarousel slides={latestProjects} />
       {/* À propos */}
       <section className="py-12 bg-color1">
         <Container>
@@ -50,7 +39,7 @@ export default function Home() {
 
           <div className="flex flex-row items-center justify-center gap-6">
             <img
-              src="/images/profile.png"
+              src="/images/profile.webp"
               alt="My Logo"
               className="hidden md:block h-40 md:h-80"
             />

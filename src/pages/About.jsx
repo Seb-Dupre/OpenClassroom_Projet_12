@@ -61,7 +61,7 @@ export default function About() {
                     <div className="border-2 w-80 flex mb-5 md:mb-10 border-color2_dark"></div>
 
                     <img
-                      src="/images/profile.png"
+                      src="/images/profile.webp"
                       alt="My logo"
                       className="float-left mr-4 mb-2 h-30 md:h-50 object-cover "
                     />
