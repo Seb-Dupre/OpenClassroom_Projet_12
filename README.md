@@ -1,8 +1,4 @@
+Lien vers l'hebergement sur Netify : https://magenta-cajeta-04470f.netlify.app/
 
-
--A Corriger
-    -faire les descriptions des projet 10 et 11 (et leurs readme)
-    -prettier
-    -effacer les formations "test" dans formations.json 
-    -ajouter "en cours de formation" ou "diplome obtenue" dans formations.json
-    -ajouter la version mobile des images pour pages home, et projects
+Ce projet est ma premiere version de mon portfolio,
+Il montre mes projets réalisé, mes formations, mes outils apris ou en cours d'apprentissage, et mes projets favoris.
