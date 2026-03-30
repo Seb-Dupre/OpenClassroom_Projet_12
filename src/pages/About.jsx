@@ -5,26 +5,15 @@ import SkillCard from "../components/SkillCard";
 import { Grow } from "@mui/material";
 import Container from "../components/Container";
 import AboutNav from "../components/AboutNav";
+import formationsData from "../data/formations.json";
+import toolsData from "../data/tools.json";
 
 export default function About() {
   const { t, i18n } = useTranslation();
   const [selectedSection, setSelectedSection] = useState("biography");
-  const [formations, setFormations] = useState([]);
-  const [tools, setTools] = useState([]);
 
-  useEffect(() => {
-    fetch("/formations.json")
-      .then((res) => res.json())
-      .then((data) => setFormations(data))
-      .catch((err) => console.error("Erreur chargement formations :", err));
-  }, []);
-
-  useEffect(() => {
-    fetch("/tools.json")
-      .then((res) => res.json())
-      .then((data) => setTools(data))
-      .catch((err) => console.error("Erreur chargement outils :", err));
-  }, []);
+  const formations = formationsData;
+  const tools = toolsData;
 
   const renderSection = (sectionContent) => (
     <Grow in mountOnEnter unmountOnExit timeout={400}>

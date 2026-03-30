@@ -63,14 +63,15 @@ export default function SwipeCarousel({ slides = [] }) {
             {/* Image */}
             <img
               src={slide.image_md}
+              srcSet={`
+              ${slide.image_sm} 450w,
+              ${slide.image_md} 768w`}
+              sizes="100vw"
               alt={slide.title}
-              loading="lazy"
-              className="
-                absolute inset-0
-                w-full h-full
-                object-cover
-                pointer-events-none
-              "
+              loading={i === 0 ? "eager" : "lazy"}
+              fetchPriority={i === 0 ? "high" : "auto"}
+              decoding="async"
+              className=" absolute inset-0 w-full h-full object-cover pointer-events-none"
             />
 
             {/* Overlay */}

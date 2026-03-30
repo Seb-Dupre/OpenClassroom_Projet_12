@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import projectsData from "../data/projects.json";
 import ProjectCard from "../components/ProjectCard";
 import Filter from "../components/Filter";
 import ProjectModal from "../components/ProjectModal";
@@ -8,20 +9,11 @@ import Container from "../components/Container";
 
 export default function Projects() {
   const { t, i18n } = useTranslation();
-  const [projects, setProjects] = useState([]);
-  const [filteredProjects, setFilteredProjects] = useState([]);
+
+  const projects = projectsData;
+  const [filteredProjects, setFilteredProjects] = useState(projectsData);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
-
-  useEffect(() => {
-    fetch("/projects.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setProjects(data);
-        setFilteredProjects(data);
-      })
-      .catch((err) => console.error("Erreur chargement projets:", err));
-  }, []);
 
   const handleFilter = (filtered) => setFilteredProjects(filtered);
   const favorites = projects.filter((p) => p.favorite);
@@ -44,7 +36,7 @@ export default function Projects() {
         </h1>
       </Container>
 
-      {/* Favoris*/}
+      {/* Favoris */}
       <section className="pb-10">
         <Container>
           <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
@@ -73,14 +65,24 @@ export default function Projects() {
                       {project.title}
                     </h3>
 
-                    {/* Image et Tags */}
+                    {/* Image + Tags */}
                     <div className="w-full md:w-[40%] flex flex-col items-center md:items-start">
                       <div className="relative w-full group rounded-2xl overflow-hidden shadow-xl">
-                        <img
-                          src={project.image_md}
-                          alt={project.title}
-                          className="w-full h-[300px] object-cover rounded-2xl transition-transform duration-300 group-hover:scale-105"
-                        />
+                        <div className="w-full aspect-[16/9]">
+                          <img
+                            src={project.image_md}
+                            alt={project.title}
+                            loading={i === 0 ? "eager" : "lazy"}
+                            fetchPriority={i === 0 ? "high" : "auto"}
+                            decoding="async"
+                            className="
+                              w-full h-full object-cover rounded-2xl
+                              transition-transform duration-300
+                              group-hover:scale-105
+                              transform-gpu will-change-transform
+                            "
+                          />
+                        </div>
 
                         {project.url && (
                           <div
@@ -97,6 +99,7 @@ export default function Projects() {
                         )}
                       </div>
 
+                      {/* Tags */}
                       <div className="flex flex-wrap gap-2 mt-3 justify-center md:justify-start">
                         {project.tags.map((tag, idx) => (
                           <span
@@ -109,21 +112,19 @@ export default function Projects() {
                       </div>
                     </div>
 
-                    {/* Texte et Titre Desktop*/}
+                    {/* Texte */}
                     <div
-                      className={`w-full md:w-[40%] flex flex-col justify-start ${
+                      className={`w-full md:w-[40%] flex flex-col ${
                         isOdd ? "md:text-right pr-4" : "md:text-left"
                       }`}
                     >
-                      {/* Titre Desktop */}
-                      <h3 className="hidden md:block text-2xl font-semibold mb-3 text-color3 cursor-default">
+                      <h3 className="hidden md:block text-2xl font-semibold mb-3 text-color3">
                         {project.title}
                       </h3>
 
-                      {/* Description */}
                       <p
                         className={`text-lg text-color3 leading-relaxed px-10 md:px-0 ${
-                          isOdd ? " md:text-right" : "md:text-left"
+                          isOdd ? "md:text-right" : "md:text-left"
                         }`}
                       >
                         {project.description?.[i18n.language] ||
@@ -141,7 +142,7 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* Tous mes Projets*/}
+      {/* Tous les projets */}
       <section className="bg-color3 py-12">
         <Container>
           <h2 className="text-2xl md:text-3xl font-semibold text-color4 mb-6 text-center">
@@ -168,6 +169,7 @@ export default function Projects() {
         </Container>
       </section>
 
+      {/* Modal */}
       <ProjectModal
         project={selectedProject}
         open={modalOpen}

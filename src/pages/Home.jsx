@@ -4,27 +4,14 @@ import ResponsiveCarousel from "../components/carousels/ResponsiveCarousel";
 import SkillCard from "../components/SkillCard";
 import { Link } from "react-router-dom";
 import Container from "../components/Container";
+import projectsData from "../data/projects.json";
+import toolsData from "../data/tools.json";
 
 export default function Home() {
   const { t } = useTranslation();
-  const [projects, setProjects] = useState([]);
-  const [latestProjects, setLatestProjects] = useState([]);
-  const [tools, setTools] = useState([]);
-
-  useEffect(() => {
-    fetch("/projects.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setProjects(data);
-        setLatestProjects(data.slice(-3));
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch("/tools.json")
-      .then((res) => res.json())
-      .then((data) => setTools(data));
-  }, []);
+  const projects = projectsData;
+  const latestProjects = projectsData.slice(-3);
+  const tools = toolsData;
 
   return (
     <div className="w-full overflow-x-hidden">

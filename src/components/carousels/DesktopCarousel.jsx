@@ -38,6 +38,7 @@ export default function DesktopCarousel({ slides = [] }) {
             width={1600}
             height={900}
             loading={i === 0 ? "eager" : "lazy"}
+            fetchPriority={i === 0 ? "high" : "auto"}
             className="absolute inset-0 w-full h-full object-cover"
             animate={{ opacity: i === index ? 1 : 0 }}
             transition={{ type: "tween", duration: 0.4 }}
