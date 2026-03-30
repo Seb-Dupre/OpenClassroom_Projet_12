@@ -1,8 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { Github, Linkedin } from "lucide-react";
 import Container from "./Container";
 
 export default function Header() {
@@ -12,6 +11,7 @@ export default function Header() {
   const langRef = useRef(null);
 
   const toggleLangMenu = () => setLangOpen((prev) => !prev);
+
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
     setLangOpen(false);
@@ -36,15 +36,18 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-color3 text-white shadow-md  z-50 relative">
+    <header className="bg-color3 text-white shadow-md z-50 relative">
       <Container>
-        <div className="flex items-center  h-22">
+        <div className="flex items-center h-22">
           {/* Logo */}
           <div className="flex items-center">
             <img
               src="/images/profile_header.webp"
               alt="My logo"
-              className="h-20 object-cover"
+              width="104"
+              height="80"
+              decoding="async"
+              className="h-20 w-26 object-cover"
             />
           </div>
 
@@ -72,13 +75,15 @@ export default function Header() {
             </ul>
           </nav>
 
-          {/* Language selector + social links */}
+          {/* Lang + social */}
           <div className="relative ml-auto md:ml-6 flex items-center gap-4">
             {/* Language selector */}
             <div className="relative" ref={langRef}>
               <button
                 onClick={toggleLangMenu}
-                className="p-1 rounded cursor-pointer"
+                aria-label="Change language"
+                aria-expanded={langOpen}
+                className="p-1 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 <img
                   src={
@@ -87,12 +92,17 @@ export default function Header() {
                       : "/images/flags/icons8-great-britain-48.png"
                   }
                   alt={i18n.language}
+                  width="32"
+                  height="32"
                   className="w-8 h-8"
                 />
               </button>
 
               {langOpen && (
-                <ul className="absolute right-0 mt-2 bg-color3 rounded shadow-md z-50 w-10 flex flex-col items-center">
+                <ul
+                  className="absolute right-0 mt-2 bg-color3 rounded shadow-md z-50 w-10 flex flex-col items-center"
+                  role="menu"
+                >
                   {i18n.language !== "fr" && (
                     <li>
                       <button
@@ -102,6 +112,8 @@ export default function Header() {
                         <img
                           src="/images/flags/icons8-france-circulaire-48.png"
                           alt="fr"
+                          width="32"
+                          height="32"
                           className="w-8 h-8"
                         />
                       </button>
@@ -116,6 +128,8 @@ export default function Header() {
                         <img
                           src="/images/flags/icons8-great-britain-48.png"
                           alt="en"
+                          width="32"
+                          height="32"
                           className="w-8 h-8"
                         />
                       </button>
@@ -125,25 +139,25 @@ export default function Header() {
               )}
             </div>
 
-            {/* social links */}
+            {/* Social links */}
             <a
               href="https://github.com/Seb-Dupre"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-color2 transition-colors"
+              aria-label="GitHub"
+              className="text-white hover:text-color2 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
             >
-              <FontAwesomeIcon icon={faGithub} size="lg" />
-              <p className="text-[0px]">Github</p>
+              <Github size={22} />
             </a>
 
             <a
               href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-color2 transition-colors"
+              aria-label="LinkedIn"
+              className="text-white hover:text-color2 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
             >
-              <FontAwesomeIcon icon={faLinkedin} size="lg" />
-              <p className="text-[0px]">Linkedin</p>
+              <Linkedin size={22} />
             </a>
           </div>
         </div>

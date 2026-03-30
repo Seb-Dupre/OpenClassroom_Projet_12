@@ -11,7 +11,6 @@ export default function SkillCard({
 }) {
   const [progress, setProgress] = useState(0);
 
-  //temps d'attente pour que l'on voit l'animation des cartes
   useEffect(() => {
     const timeout = setTimeout(() => {
       setProgress(level);
@@ -24,16 +23,27 @@ export default function SkillCard({
     <div className="flex flex-col items-center text-center">
       <img
         src={icon}
-        alt={alt}
+        alt={alt || name}
+        width="64"
+        height="64"
+        loading="lazy"
+        decoding="async"
         className={`object-contain mb-2 ${skillIconSize}`}
       />
 
       <p className={`text-color3 font-medium mb-2 ${skillTitle}`}>{name}</p>
 
       {showLevel && (
-        <div className="w-full bg-color4 rounded-full h-3 shadow-inner overflow-hidden">
+        <div
+          className="w-full bg-color4 rounded-full h-3 shadow-inner overflow-hidden"
+          role="progressbar"
+          aria-valuenow={progress}
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-label={`${name} level`}
+        >
           <div
-            className="bg-color2 h-3 rounded-full transition-all duration-1000 ease-out"
+            className="bg-color2 h-3 rounded-full transition-all duration-700 ease-out"
             style={{ width: `${progress}%` }}
           />
         </div>

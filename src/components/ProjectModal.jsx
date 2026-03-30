@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { X } from "lucide-react";
 
 export default function ProjectModal({ project, open, onClose }) {
   const { i18n, t } = useTranslation();
@@ -41,6 +40,9 @@ export default function ProjectModal({ project, open, onClose }) {
     <AnimatePresence>
       <motion.div
         className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-100 p-4"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-title"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -53,21 +55,25 @@ export default function ProjectModal({ project, open, onClose }) {
             h-auto max-h-[90vh] overflow-y-auto
             p-6 relative
           "
-          initial={{ scale: 0.8, opacity: 0 }}
+          initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.8, opacity: 0 }}
-          transition={{ type: "spring", stiffness: 200, damping: 20 }}
+          exit={{ scale: 0.9, opacity: 0 }}
+          transition={{ duration: 0.25 }}
         >
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 p-1 rounded-full bg-color1 hover:bg-color2 text-color3 hover:text-white cursor-pointer"
+            aria-label="Close modal"
+            className="absolute top-3 right-3 p-1 rounded-full bg-color1 hover:bg-color2 text-color3 hover:text-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-color2/50"
           >
-            <FontAwesomeIcon icon={faTimes} size="lg" />
+            <X size={20} />
           </button>
 
           {/* Title */}
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-color3">
+          <h2
+            id="project-title"
+            className="text-2xl md:text-3xl font-bold mb-4 text-color3"
+          >
             {project.title}
           </h2>
 
@@ -75,14 +81,18 @@ export default function ProjectModal({ project, open, onClose }) {
           <img
             src={project.image}
             alt={project.title}
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
             className="w-full rounded-lg mb-4"
           />
 
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-4">
-            {project.tags?.map((tag, i) => (
+            {project.tags?.map((tag) => (
               <span
-                key={i}
+                key={tag}
                 className="px-2 py-1 bg-color3 text-color4 rounded-md text-sm"
               >
                 {tag}
@@ -101,7 +111,7 @@ export default function ProjectModal({ project, open, onClose }) {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center bg-color3 hover:bg-color2 text-white font-medium py-2 rounded-md"
+              className="block text-center bg-color3 hover:bg-color2 text-white font-medium py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-color2/50"
             >
               {t("project.githubButton")}
             </a>

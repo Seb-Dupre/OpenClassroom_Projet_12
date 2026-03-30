@@ -1,14 +1,24 @@
 export default function FormationCard({ logo, title, description, tags }) {
   return (
     <div className="bg-color4 rounded-2xl shadow-md p-4 flex flex-col gap-3 h-full">
-      <img src={logo} alt={title} className="w-20 h-20 object-contain mb-2" />
+      <img
+        src={logo}
+        alt={title}
+        width="80"
+        height="80"
+        loading="lazy"
+        decoding="async"
+        className="w-20 h-20 object-contain mb-2"
+      />
+
       <h3 className="text-xl font-semibold text-color3">{title}</h3>
+
       <p className="text-color3 text-sm md:text-base">{description}</p>
 
       <div className="flex flex-wrap gap-2 mt-auto">
-        {tags.map((tag, index) => (
+        {tags.map((tag) => (
           <span
-            key={index}
+            key={tag}
             className="bg-color3 text-color4 px-2 py-1 rounded text-xs"
           >
             {tag}

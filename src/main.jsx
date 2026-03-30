@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import AppRouter from "./routes.jsx";
 import "./i18n";
+import "./style.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -12,5 +13,5 @@ createRoot(document.getElementById("root")).render(
         <AppRouter />
       </Layout>
     </BrowserRouter>
-  </StrictMode>
+  </StrictMode>,
 );

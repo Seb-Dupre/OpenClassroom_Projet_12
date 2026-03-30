@@ -1,21 +1,15 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome,
-  faUser,
-  faFolderOpen,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
+import { Home, User, FolderOpen, Mail } from "lucide-react";
 
 export default function BottomNav() {
   const location = useLocation();
   const navigate = useNavigate();
 
   const navItems = [
-    { to: "/", icon: faHome, label: "Home" },
-    { to: "/about", icon: faUser, label: "About" },
-    { to: "/projects", icon: faFolderOpen, label: "Projects" },
-    { to: "/contact", icon: faEnvelope, label: "Contact" },
+    { to: "/", icon: Home, label: "Home" },
+    { to: "/about", icon: User, label: "About" },
+    { to: "/projects", icon: FolderOpen, label: "Projects" },
+    { to: "/contact", icon: Mail, label: "Contact" },
   ];
 
   return (
@@ -23,6 +17,7 @@ export default function BottomNav() {
       <ul className="flex justify-around py-3">
         {navItems.map((item) => {
           const isActive = location.pathname === item.to;
+          const Icon = item.icon;
 
           return (
             <li key={item.to}>
@@ -32,7 +27,7 @@ export default function BottomNav() {
                   isActive ? "text-color2_dark" : "text-color3"
                 }`}
               >
-                <FontAwesomeIcon icon={item.icon} size="lg" />
+                <Icon size={24} />
                 <span className="mt-1">{item.label}</span>
               </button>
             </li>

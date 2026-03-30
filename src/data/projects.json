@@ -2,9 +2,9 @@
   {
     "id": 1,
     "title": "Riding Cities",
-    "image": "/images/projects/Riding Cities.webp",
-    "image_md": "/images/projects/Riding Cities_md.webp",
-    "image_sm": "/images/projects/Riding Cities_sm.webp",
+    "image": "/images/projects/RidingCities.webp",
+    "image_md": "/images/projects/RidingCities_md.webp",
+    "image_sm": "/images/projects/RidingCities_sm.webp",
     "alt": "Screenshot of the Riding Cities project",
     "tags": ["HTML"],
     "favorite": false,
@@ -115,8 +115,8 @@
     "favorite": false,
     "url": "https://github.com/Seb-Dupre/OpenClassroom_Projet_10",
     "description": {
-      "fr": "Dixième projet d'OpenClassrooms en tant qu'intégrateur web.",
-      "en": "Tenth project at OpenClassrooms as a web integrator."
+      "fr": "Dixième projet d'OpenClassrooms en tant qu'intégrateur web, axé sur les tests. Principalement les tests unitaires, leurs utilités, comment les utiliser, mais aussi les tests utilisateurs",
+      "en": "Tenth OpenClassrooms project as a web integrator, focused on testing. Objectives: understand and implement unit tests as well as user testing."
     }
   },
   {
@@ -130,8 +130,8 @@
     "favorite": false,
     "url": "https://github.com/Seb-Dupre/OpenClassroom_Projet_11-React",
     "description": {
-      "fr": "Onzième projet d'OpenClassrooms en tant qu'intégrateur web.",
-      "en": "Eleventh project at OpenClassrooms as a web integrator."
+      "fr": "Onzième projet d'OpenClassrooms en tant qu'intégrateur web. Objectifs : implémenter Redux pour la gestion d’état global, intégrer une API backend et développer une application React structurée.",
+      "en": "Eleventh OpenClassrooms project as a web integrator. Objectives: implement Redux for global state management, integrate a backend API, and develop a structured React application."
     }
   },
   {

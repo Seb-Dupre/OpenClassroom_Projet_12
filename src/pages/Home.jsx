@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import ResponsiveCarousel from "../components/carousels/ResponsiveCarousel";
 import SkillCard from "../components/SkillCard";
@@ -9,15 +8,16 @@ import toolsData from "../data/tools.json";
 
 export default function Home() {
   const { t } = useTranslation();
-  const projects = projectsData;
+
   const latestProjects = projectsData.slice(-3);
-  const tools = toolsData;
+  const latestTools = toolsData.slice(-3);
 
   return (
-    <div className="w-full overflow-x-hidden">
-      {/* Hero*/}
+    <main className="w-full overflow-x-hidden">
+      {/* Hero */}
       <ResponsiveCarousel slides={latestProjects} />
-      {/* À propos */}
+
+      {/* About */}
       <section className="py-12 bg-color1">
         <Container>
           <h1 className="text-3xl md:text-4xl font-semibold text-color3 text-center mb-15">
@@ -27,20 +27,26 @@ export default function Home() {
           <div className="flex flex-row items-center justify-center gap-6">
             <img
               src="/images/profile.webp"
-              alt="My Logo"
-              className="hidden md:block h-40 md:h-80"
+              alt="My logo"
+              width="320"
+              height="320"
+              loading="lazy"
+              decoding="async"
+              className="hidden md:block h-40 md:h-80 object-contain"
             />
 
             <div className="flex flex-col items-start">
               <h2 className="text-2xl md:text-3xl font-semibold text-color3 mb-4">
                 {t("home.aboutTitle")}
               </h2>
+
               <p className="max-w-lg text-gray-700 md:text-lg">
                 {t("home.aboutText")}
               </p>
+
               <Link
                 to="/about"
-                className="inline-block mt-6 bg-color3 hover:bg-color2 text-white px-6 py-2 rounded font-medium"
+                className="inline-block mt-6 bg-color3 hover:bg-color2 text-white px-6 py-2 rounded font-medium focus:outline-none focus:ring-2 focus:ring-color2/50"
               >
                 {t("home.aboutButton")}
               </Link>
@@ -49,7 +55,7 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Outils récents */}
+      {/* Tools */}
       <section className="py-12 bg-linear-to-b from-color1 to-color2 text-center">
         <Container>
           <h2 className="text-2xl md:text-3xl font-semibold text-color3 mb-6">
@@ -57,7 +63,7 @@ export default function Home() {
           </h2>
 
           <div className="flex flex-wrap justify-center items-center gap-5 md:gap-10">
-            {tools.slice(-3).map((tool) => (
+            {latestTools.map((tool) => (
               <div
                 key={tool.name}
                 className="bg-color1_light rounded-full h-30 md:h-40 lg:h-60 w-30 md:w-40 lg:w-60 flex items-center justify-center shadow-2xl"
@@ -83,16 +89,18 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl font-semibold text-color3 mb-4">
               {t("home.contactTitle")}
             </h2>
+
             <p className="text-color3 mb-6 text-xl">{t("home.contactText")}</p>
+
             <Link
               to="/contact"
-              className="inline-block bg-color3 hover:bg-color2 text-xl text-white px-6 py-2 rounded font-medium"
+              className="inline-block bg-color3 hover:bg-color2 text-xl text-white px-6 py-2 rounded font-medium focus:outline-none focus:ring-2 focus:ring-color2/50"
             >
               {t("home.contactButton")}
             </Link>
           </div>
         </Container>
       </section>
-    </div>
+    </main>
   );
 }

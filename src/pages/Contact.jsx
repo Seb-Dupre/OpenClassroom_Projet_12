@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
-import Container from "../components/Container";
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -116,7 +115,9 @@ export default function Contact() {
         </button>
 
         {status === "success" && (
-          <p className="text-color2_dark font-bold text-xl mt-2">Message envoyé avec succès !</p>
+          <p className="text-color2_dark font-bold text-xl mt-2">
+            Message envoyé avec succès !
+          </p>
         )}
         {status === "error" && (
           <p className="text-red-600 mt-2">

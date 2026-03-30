@@ -10,7 +10,7 @@ export default function AboutNav({ selectedSection, onSelect }) {
   ];
 
   return (
-    <nav className="flex flex-row md:flex-col gap-4 flex-wrap">
+    <nav className="flex flex-row md:flex-col gap-4 flex-wrap" role="tablist">
       {items.map((item) => {
         const isActive = selectedSection === item.key;
 
@@ -18,14 +18,19 @@ export default function AboutNav({ selectedSection, onSelect }) {
           <button
             key={item.key}
             onClick={() => onSelect(item.key)}
+            role="tab"
+            aria-selected={isActive}
+            aria-controls={`section-${item.key}`}
             className={`
               whitespace-nowrap
-              md:text-left cursor-pointer 
-              transition-all font-semibold md:bg-transparent py-1 px-2 md:p-0 rounded-2xl md:rounded-none md:font-bold md:text-xl
+              md:text-left cursor-pointer
+              transition-all duration-200
+              font-semibold md:bg-transparent py-1 px-2 md:p-0 rounded-2xl md:rounded-none md:font-bold md:text-xl
+              focus:outline-none focus:ring-2 focus:ring-color2_dark/50
               ${
                 isActive
-                  ? "text-white bg-color2_dark  md:text-color2_dark md:underline md:underline-offset-4"
-                  : "text-white bg-color3  md:text-color3 hover:bg-color2  md:hover:text-color2 md:hover:bg-transparent"
+                  ? "text-white bg-color2_dark md:text-color2_dark md:underline md:underline-offset-4"
+                  : "text-white bg-color3 md:text-color3 hover:bg-color2 md:hover:text-color2 md:hover:bg-transparent"
               }
             `}
           >
