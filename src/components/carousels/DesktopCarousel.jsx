@@ -22,21 +22,14 @@ export default function DesktopCarousel({ slides = [] }) {
   }, [total, modalOpen]);
 
   if (slides.length === 0) {
-    return (
-      <div
-        className="bg-inactive h-[80vh] max-h-[900px]"
-        
-      />
-    );
+    return <div className="bg-inactive h-[80vh] max-h-[900px]" />;
   }
 
   const currentSlide = slides[index];
 
   return (
     <div className="relative overflow-hidden bg-color3_dark py-8 px-8 flex flex-col items-center">
-      <div
-        className="relative w-full max-w-[1700px] rounded-xl overflow-hidden h-[80vh] max-h-[900px]"
-      >
+      <div className="relative w-full max-w-[1700px] rounded-xl overflow-hidden h-[80vh] max-h-[900px]">
         {slides.map((slide, i) => (
           <motion.img
             key={slide.id || i}
@@ -83,12 +76,12 @@ export default function DesktopCarousel({ slides = [] }) {
         </button>
       </div>
 
-      {/* DOTS AVEC HAUTEUR FIXE */}
-      <div className="h-[32px] mt-2">
+      {/* DOTS */}
+      <div className="h-8 mt-2">
         <Dots current={index} total={total} onClick={setIndex} />
       </div>
 
-      {/* MODAL SEULEMENT SI OUVERT */}
+      {/* MODAL  */}
       {modalOpen && (
         <ProjectModal
           project={currentSlide}

@@ -77,7 +77,7 @@ export default function Projects() {
                     <div className="w-full md:w-[40%] flex flex-col items-center md:items-start">
                       <div className="relative w-full group rounded-2xl overflow-hidden shadow-xl">
                         <img
-                          src={project.image}
+                          src={project.image_md}
                           alt={project.title}
                           className="w-full h-[300px] object-cover rounded-2xl transition-transform duration-300 group-hover:scale-105"
                         />

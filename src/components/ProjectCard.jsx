@@ -12,7 +12,7 @@ export default function ProjectCard({ project }) {
       "
     >
       <img
-        src={project.image}
+        src={project.image_md}
         alt={project.alt}
         className="w-full h-52 object-cover"
       />

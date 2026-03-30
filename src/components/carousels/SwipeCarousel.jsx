@@ -25,9 +25,7 @@ export default function SwipeCarousel({ slides = [] }) {
 
   // PLACEHOLDER
   if (total === 0) {
-    return (
-      <div className="bg-inactive h-[56vw] max-h-[300px]" />
-    );
+    return <div className="bg-inactive h-[56vw] max-h-[300px]" />;
   }
 
   const currentSlide = slides[index];
@@ -64,10 +62,8 @@ export default function SwipeCarousel({ slides = [] }) {
           >
             {/* Image */}
             <img
-              src={slide.image}
+              src={slide.image_md}
               alt={slide.title}
-              width={1200}
-              height={675}
               loading="lazy"
               className="
                 absolute inset-0
@@ -89,14 +85,14 @@ export default function SwipeCarousel({ slides = [] }) {
         ))}
       </motion.div>
 
-      {/* DOTS avec espace réservé */}
-      <div className="h-[32px] mt-4">
+      {/* DOTS  */}
+      <div className="h-8 mt-4">
         <Dots current={index} total={total} onClick={setIndex} />
       </div>
 
       <GradientEdges />
 
-      {/* MODAL seulement si ouvert */}
+      {/* MODAL */}
       {modalOpen && (
         <ProjectModal
           project={currentSlide}
