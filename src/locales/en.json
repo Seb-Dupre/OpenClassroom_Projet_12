@@ -54,7 +54,9 @@
       "name": "Your Name.",
       "email": "Your E-mail adress.",
       "message": "Your message."
-    }
+    },
+    "success":"Your message has been sent successfully!",
+    "error":"An error occurred, please try again."
   },
   "courses": {
     "title": "Courses & Experience",

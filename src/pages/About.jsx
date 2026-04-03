@@ -58,7 +58,7 @@ export default function About() {
                       {t("about.bioSection")}
                     </h2>
 
-                    <div className="border-2 w-80 flex mb-5 md:mb-10 border-color2_dark"></div>
+                    <div className="border-2 w-50 md:w-80 flex mb-5 md:mb-10 border-color2_dark"></div>
 
                     <img
                       src="/images/profile.webp"
@@ -85,7 +85,7 @@ export default function About() {
                     {t("about.trainingSection")}
                   </h2>
 
-                  <div className="border-2 flex mb-15 mx-auto border-color2_dark"></div>
+                  <div className="border-2  max-w-150 flex mb-15 px-2 sm:px-10 mx-auto border-color2_dark"></div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
                     {formations.map((formation) => (
@@ -109,7 +109,7 @@ export default function About() {
                     {t("about.skillsSection")}
                   </h2>
 
-                  <div className="border-2 w-150 flex mb-15 mx-auto border-color2_dark"></div>
+                  <div className="border-2  max-w-150 flex mb-15 px-2 sm:px-10 mx-auto border-color2_dark"></div>
 
                   <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 justify-items-center">
                     {tools.map((tool) => (

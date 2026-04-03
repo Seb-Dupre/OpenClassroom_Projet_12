@@ -52,7 +52,9 @@
       "name": "Votre Nom.",
       "email": "Votre adresse E-mail.",
       "message": "Votre message."
-    }
+    },
+    "success": "Message envoyé avec succès !",
+    "error":"Une erreur est survenue, veuillez réessayer."
   },
   "courses": {
     "title": "Parcours & Expériences",

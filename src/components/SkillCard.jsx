@@ -35,7 +35,7 @@ export default function SkillCard({
 
       {showLevel && (
         <div
-          className="w-full bg-color4 rounded-full h-3 shadow-inner overflow-hidden"
+          className="w-25 bg-color4 rounded-full h-3 shadow-inner overflow-hidden"
           role="progressbar"
           aria-valuenow={progress}
           aria-valuemin="0"

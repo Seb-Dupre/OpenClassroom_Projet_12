@@ -30,24 +30,6 @@
     "level": 60
   },
   {
-    "name": "React",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    "alt": "React logo",
-    "level": 60
-  },
-  {
-    "name": "Redux",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-    "alt": "Redux logo",
-    "level": 25
-  },
-  {
-    "name": "TailwindCSS",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    "alt": "Tailwind CSS logo",
-    "level": 55
-  },
-  {
     "name": "Git",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     "alt": "Git logo",
@@ -66,9 +48,27 @@
     "level": 10
   },
   {
+    "name": "React",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "alt": "React logo",
+    "level": 60
+  },
+  {
     "name": "SEO Basics",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
     "alt": "SEO",
     "level": 40
+  },
+  {
+    "name": "Redux",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    "alt": "Redux logo",
+    "level": 25
+  },
+  {
+    "name": "TailwindCSS",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    "alt": "Tailwind CSS logo",
+    "level": 55
   }
 ]

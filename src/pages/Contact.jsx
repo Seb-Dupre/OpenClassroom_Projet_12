@@ -116,13 +116,11 @@ export default function Contact() {
 
         {status === "success" && (
           <p className="text-color2_dark font-bold text-xl mt-2">
-            Message envoyé avec succès !
+            {t("contact.success")}
           </p>
         )}
         {status === "error" && (
-          <p className="text-red-600 mt-2">
-            Une erreur est survenue, veuillez réessayer.
-          </p>
+          <p className="text-red-600 mt-2">{t("contact.error")}</p>
         )}
       </form>
     </div>

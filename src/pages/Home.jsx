@@ -9,8 +9,8 @@ import toolsData from "../data/tools.json";
 export default function Home() {
   const { t } = useTranslation();
 
-  const latestProjects = projectsData.slice(-3);
-  const latestTools = toolsData.slice(-3);
+  const latestProjects = projectsData.slice(-3).reverse();
+  const latestTools = toolsData.slice(-3).reverse();
 
   return (
     <main className="w-full overflow-x-hidden">
